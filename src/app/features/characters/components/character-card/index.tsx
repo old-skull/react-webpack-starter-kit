@@ -1,6 +1,16 @@
-import { Avatar, Box, Flex, Heading, useBreakpointValue, useColorMode } from '@chakra-ui/react';
+import {
+  Avatar,
+  Box,
+  Flex,
+  Heading,
+  Icon,
+  useBreakpointValue,
+  useColorMode,
+} from '@chakra-ui/react';
 import { ICharacter } from '@features/characters';
+import { Link } from '@shared/components';
 import { FC } from 'react';
+import { BsFillArrowRightCircleFill } from 'react-icons/bs';
 import './card.scss';
 
 interface ICharacterCard {
@@ -21,6 +31,7 @@ export const CharacterCard: FC<ICharacterCard> = ({ character }) => {
       rounded="md"
       position="relative"
       overflow="hidden"
+      _focusWithin={{ outline: '2px solid teal' }}
     >
       <Flex
         className="character-card__content"
@@ -37,7 +48,8 @@ export const CharacterCard: FC<ICharacterCard> = ({ character }) => {
         </Heading>
       </Flex>
 
-      <Box
+      <Flex
+        alignItems="center"
         className="character-card__caption"
         position="absolute"
         color="white"
@@ -52,9 +64,15 @@ export const CharacterCard: FC<ICharacterCard> = ({ character }) => {
         bg="teal"
         overflowY="auto"
         transition="transform 0.4s, opacity 0.1s 0.3s"
+        gridGap={2}
       >
-        {caption}
-      </Box>
+        <Box textAlign="justify">{caption}</Box>
+        <Box>
+          <Link to={name}>
+            <Icon boxSize="6" as={BsFillArrowRightCircleFill} />
+          </Link>
+        </Box>
+      </Flex>
     </Flex>
   );
 };

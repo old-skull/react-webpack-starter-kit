@@ -29,14 +29,14 @@ const initialState: CharactersState = {
       name: 'Emiel Regis Rohellec Terzieff-Godefroy',
       avatar: 'https://static.wikia.nocookie.net/witcher/images/b/bd/Tw3_journal_regis.png',
       caption:
-        'Better known simply as Regis, was a very powerful higher vampire, and more than four hundred years old when he first met Geralt of Rivia. He was the barber-surgeon of Dillingen. He was very intellectual and could be considered a polymath, knowing about many different subjects.',
+        'Better known simply as Regis, was a very powerful higher vampire, and more than four hundred years old when he first met Geralt of Rivia. He was the barber-surgeon of Dillingen. Intellectual person and polymath.',
     },
     {
       id: '4',
       name: 'Yennefer of Vengerberg',
       avatar: 'https://static.wikia.nocookie.net/witcher/images/4/47/Tw3_journal_yennefer.png',
       caption:
-        "Born on Belleteyn in 1173, was a sorceress who lived in Vengerberg, the capital city of Aedirn. She was Geralt of Rivia's true love and a mother figure to Ciri, whom she viewed like a daughter to the point that she did everything she could to rescue the girl and keep her from harm.",
+        "Born on Belleteyn in 1173, was a sorceress who lived in Vengerberg, the capital city of Aedirn. She was Geralt of Rivia's true love and a mother figure to Ciri, whom she viewed like a daughter.",
     },
   ],
   loading: false,
