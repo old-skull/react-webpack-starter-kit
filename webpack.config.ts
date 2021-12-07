@@ -13,14 +13,17 @@ interface IEnv {
 
 const webpackConfig = (env: IEnv): Configuration => ({
   entry: './src/index.tsx',
-  ...(env.production || !env.development ? {} : { devtool: 'eval-source-map' }),
+  ...(env.production || !env.development ? {} : { devtool: 'eval' }),
   resolve: {
     extensions: ['.ts', '.tsx', '.js', 'jsx'],
     plugins: [new TsconfigPathsPlugin()],
   },
+  infrastructureLogging: {
+    level: 'none',
+  },
   output: {
     path: path.join(__dirname, '/build'),
-    filename: 'build.js',
+    filename: '[name].[contenthash].js',
   },
   module: {
     rules: [
@@ -40,8 +43,39 @@ const webpackConfig = (env: IEnv): Configuration => ({
   },
   devServer: {
     historyApiFallback: true,
+    open: false,
+    client: {
+      logging: 'none',
+    },
+  },
+  stats: {
+    hash: true,
+    timings: true,
+    builtAt: true,
+    chunks: true,
+    version: false,
+    cached: false,
+    assets: false,
+    children: false,
+    chunkModules: false,
+    modules: false,
+    entrypoints: false,
+    cachedModules: false,
+    cachedAssets: false,
+    logging: 'none',
   },
   optimization: {
+    moduleIds: 'deterministic',
+    runtimeChunk: 'single',
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendors',
+          chunks: 'all',
+        },
+      },
+    },
     minimize: true,
     minimizer: [
       new TerserPlugin({

@@ -29,6 +29,7 @@ specifiers:
   react-redux: ^7.2.6
   react-router-dom: '6'
   redux: ^4.1.2
+  rimraf: ^3.0.2
   sass: ^1.43.4
   sass-loader: ^12.3.0
   style-loader: ^3.3.1
@@ -72,6 +73,7 @@ devDependencies:
   fork-ts-checker-webpack-plugin: 6.4.1_38617acf26106dca33bfe5f0320eb5cd
   html-webpack-plugin: 5.5.0_webpack@5.64.2
   prettier: 2.4.1
+  rimraf: 3.0.2
   sass: 1.43.4
   sass-loader: 12.3.0_sass@1.43.4+webpack@5.64.2
   style-loader: 3.3.1_webpack@5.64.2

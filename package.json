@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "webpack-cli serve --mode=development --port 3000 --env development --open --hot",
-    "build": "webpack-cli build --mode=production --env production",
+    "start": "webpack-cli serve --mode=development --port 3000 --env development --hot",
+    "build": "rimraf build && webpack-cli build --mode=production --env production",
     "lint": "eslint \"./src/**/*.{ts,tsx}\" --fix",
     "format": "prettier --write \"./**/*.{ts,tsx}\""
   },
@@ -46,6 +46,7 @@
     "fork-ts-checker-webpack-plugin": "^6.4.1",
     "html-webpack-plugin": "^5.5.0",
     "prettier": "^2.4.1",
+    "rimraf": "^3.0.2",
     "sass": "^1.43.4",
     "sass-loader": "^12.3.0",
     "style-loader": "^3.3.1",
