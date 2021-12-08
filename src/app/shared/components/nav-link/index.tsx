@@ -14,7 +14,7 @@ interface INavLink extends TNavLinkProps {
   children: ReactNode;
 }
 
-export const NavLink: FC<INavLink> = ({ children, to, end }) => {
+export const NavLink: FC<INavLink> = ({ children, to, end, ...rest }) => {
   const { pathname: locationPathname } = useLocation();
   const { pathname: toPathname } = useResolvedPath(to);
 
@@ -29,6 +29,7 @@ export const NavLink: FC<INavLink> = ({ children, to, end }) => {
       as={RouterNavLink}
       to={normalizeHref(to)}
       style={{ color: isActive ? 'teal' : 'currentColor' }}
+      {...rest}
     >
       {children}
     </ChakraLink>

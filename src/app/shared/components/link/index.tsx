@@ -9,9 +9,9 @@ interface ILink extends TLinkProps {
   children: ReactNode;
 }
 
-export const Link: FC<ILink> = ({ children, to }) => {
+export const Link: FC<ILink> = ({ children, to, ...rest }) => {
   return (
-    <ChakraLink as={RouterLink} to={normalizeHref(to)}>
+    <ChakraLink as={RouterLink} to={normalizeHref(to)} {...rest}>
       {children}
     </ChakraLink>
   );
