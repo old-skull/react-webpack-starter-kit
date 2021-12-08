@@ -9,7 +9,6 @@ export const CharactersPage: FC<unknown> = () => {
   const characters = useSelector((state: RootState) => state.characters.data);
   const loaded = useSelector((state: RootState) => state.characters.loaded);
   const pageTitle = useSelector((state: RootState) => state.characters.pageTitle);
-  console.log(pageTitle);
 
   useDocumentTitle(pageTitle);
 
