@@ -1,6 +1,6 @@
 import { Stack } from '@chakra-ui/react';
 import { IDrawerLink } from '@features/drawer';
-import { Link } from '@shared/components';
+import { NavLink } from '@shared/components';
 import { FC } from 'react';
 
 interface IDrawerMenu {
@@ -11,9 +11,9 @@ export const DrawerMenu: FC<IDrawerMenu> = ({ navLinks }) => {
   return (
     <Stack spacing={2}>
       {navLinks.map(({ to, label }) => (
-        <Link to={to} key={`${to}_${label}`}>
+        <NavLink to={to} key={`${to}_${label}`}>
           {label}
-        </Link>
+        </NavLink>
       ))}
     </Stack>
   );

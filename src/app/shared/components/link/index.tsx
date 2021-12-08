@@ -1,4 +1,5 @@
 import { Link as ChakraLink, LinkProps as ChakraLinkProps } from '@chakra-ui/react';
+import { normalizeHref } from '@shared/utils';
 import { FC, ReactNode } from 'react';
 import { Link as RouterLink, LinkProps as RouterLinkProps } from 'react-router-dom';
 
@@ -9,10 +10,8 @@ interface ILink extends TLinkProps {
 }
 
 export const Link: FC<ILink> = ({ children, to }) => {
-  const formattedHref = to.toString().toLocaleLowerCase().trim().replace(/\s+/g, '-');
-
   return (
-    <ChakraLink as={RouterLink} to={formattedHref}>
+    <ChakraLink as={RouterLink} to={normalizeHref(to)}>
       {children}
     </ChakraLink>
   );
