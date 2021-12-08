@@ -18,9 +18,6 @@ const webpackConfig = (env: IEnv): Configuration => ({
     extensions: ['.ts', '.tsx', '.js', 'jsx'],
     plugins: [new TsconfigPathsPlugin()],
   },
-  infrastructureLogging: {
-    level: 'none',
-  },
   output: {
     path: path.join(__dirname, '/build'),
     filename: '[name].[contenthash].js',
@@ -45,7 +42,7 @@ const webpackConfig = (env: IEnv): Configuration => ({
     historyApiFallback: true,
     open: false,
     client: {
-      logging: 'none',
+      logging: 'error',
     },
   },
   stats: {
@@ -62,7 +59,6 @@ const webpackConfig = (env: IEnv): Configuration => ({
     entrypoints: false,
     cachedModules: false,
     cachedAssets: false,
-    logging: 'none',
   },
   optimization: {
     moduleIds: 'deterministic',
