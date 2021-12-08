@@ -5,13 +5,14 @@ import { FC } from 'react';
 
 interface IDrawerMenu {
   navLinks: IDrawerLink[];
+  onClose: () => void;
 }
 
-export const DrawerMenu: FC<IDrawerMenu> = ({ navLinks }) => {
+export const DrawerMenu: FC<IDrawerMenu> = ({ navLinks, onClose }) => {
   return (
     <Stack spacing={2}>
       {navLinks.map(({ to, label }) => (
-        <NavLink to={to} key={`${to}_${label}`}>
+        <NavLink to={to} key={`${to}_${label}`} onClick={onClose}>
           {label}
         </NavLink>
       ))}

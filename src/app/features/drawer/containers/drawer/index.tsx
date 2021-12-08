@@ -24,7 +24,13 @@ export const Drawer: FC<IDrawer> = ({ isOpen, onClose, finalRef }) => {
   ];
 
   return (
-    <ChakraDrawer isOpen={isOpen} placement="left" onClose={onClose} finalFocusRef={finalRef}>
+    <ChakraDrawer
+      isOpen={isOpen}
+      placement="left"
+      onClose={onClose}
+      finalFocusRef={finalRef}
+      closeOnEsc
+    >
       <DrawerOverlay />
 
       <DrawerContent>
@@ -37,7 +43,7 @@ export const Drawer: FC<IDrawer> = ({ isOpen, onClose, finalRef }) => {
         </DrawerHeader>
 
         <DrawerBody>
-          <DrawerMenu navLinks={drawerMenuLinks} />
+          <DrawerMenu navLinks={drawerMenuLinks} onClose={onClose} />
         </DrawerBody>
       </DrawerContent>
     </ChakraDrawer>
