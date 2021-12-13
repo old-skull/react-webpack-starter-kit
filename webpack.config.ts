@@ -21,6 +21,7 @@ const webpackConfig = (env: IEnv): Configuration => ({
   output: {
     path: path.join(__dirname, '/build'),
     filename: '[name].[contenthash].js',
+    publicPath: '/',
   },
   module: {
     rules: [
