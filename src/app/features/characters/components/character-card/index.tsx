@@ -18,7 +18,7 @@ interface ICharacterCard {
 }
 
 export const CharacterCard: FC<ICharacterCard> = ({ character }) => {
-  const { name, avatar, caption } = character;
+  const { name, avatar, caption, id } = character;
   const { colorMode } = useColorMode();
   const avatarSize = useBreakpointValue({ md: '2xl', sm: 'xl' });
 
@@ -68,7 +68,7 @@ export const CharacterCard: FC<ICharacterCard> = ({ character }) => {
       >
         <Box textAlign="justify">{caption}</Box>
         <Box>
-          <Link to={name}>
+          <Link to={id}>
             <Icon boxSize="6" as={BsFillArrowRightCircleFill} />
           </Link>
         </Box>
