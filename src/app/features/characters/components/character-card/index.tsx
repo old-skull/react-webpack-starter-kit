@@ -1,16 +1,8 @@
-import {
-  Avatar,
-  Box,
-  Flex,
-  Heading,
-  Icon,
-  useBreakpointValue,
-  useColorMode,
-} from '@chakra-ui/react';
+import { ArrowRightIcon } from '@chakra-ui/icons';
+import { Avatar, Box, Flex, Heading, useBreakpointValue, useColorMode } from '@chakra-ui/react';
 import { ICharacter } from '@features/characters';
 import { Link } from '@shared/components';
 import { FC } from 'react';
-import { BsFillArrowRightCircleFill } from 'react-icons/bs';
 import './card.scss';
 
 interface ICharacterCard {
@@ -67,11 +59,11 @@ export const CharacterCard: FC<ICharacterCard> = ({ character }) => {
         gridGap={2}
       >
         <Box textAlign="justify">{caption}</Box>
-        <Box>
-          <Link to={id}>
-            <Icon boxSize="6" as={BsFillArrowRightCircleFill} />
+        <Flex minW="60px" justifyContent="center">
+          <Link to={id} aria-label={`Go to ${name} page`}>
+            <ArrowRightIcon />
           </Link>
-        </Box>
+        </Flex>
       </Flex>
     </Flex>
   );
