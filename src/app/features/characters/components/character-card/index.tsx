@@ -1,9 +1,9 @@
 import { ArrowRightIcon } from '@chakra-ui/icons';
-import { Avatar, Box, Flex, Heading, useBreakpointValue, useColorMode } from '@chakra-ui/react';
+import { Avatar, Box, Flex, Heading, useColorMode } from '@chakra-ui/react';
 import { ICharacter } from '@features/characters';
 import { Link } from '@shared/components';
 import { FC } from 'react';
-import './card.scss';
+import './character-card.scss';
 
 interface ICharacterCard {
   character: ICharacter;
@@ -12,10 +12,10 @@ interface ICharacterCard {
 export const CharacterCard: FC<ICharacterCard> = ({ character }) => {
   const { name, avatar, caption, id } = character;
   const { colorMode } = useColorMode();
-  const avatarSize = useBreakpointValue({ md: '2xl', sm: 'xl' });
 
   return (
     <Flex
+      minH="200px"
       className="character-card"
       padding={2}
       borderLeft="6px solid teal"
@@ -34,7 +34,13 @@ export const CharacterCard: FC<ICharacterCard> = ({ character }) => {
         transitionDuration="0.8s"
         _groupHover={{ transform: 'translateX(5rem)' }}
       >
-        <Avatar size={avatarSize} name={name} src={avatar} bg="transparent" />
+        <Avatar
+          size="2xl"
+          name={name}
+          src={avatar}
+          bg="transparent"
+          aria-label={`${name} avatar`}
+        />
         <Heading as="h6" size="sm" isTruncated>
           {name}
         </Heading>
@@ -58,7 +64,9 @@ export const CharacterCard: FC<ICharacterCard> = ({ character }) => {
         transition="transform 0.4s, opacity 0.1s 0.3s"
         gridGap={2}
       >
-        <Box textAlign="justify">{caption}</Box>
+        <Box textAlign="justify" wordBreak="break-all">
+          {caption}
+        </Box>
         <Flex minW="60px" justifyContent="center">
           <Link to={id} aria-label={`Go to ${name} page`}>
             <ArrowRightIcon />
