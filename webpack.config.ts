@@ -13,10 +13,16 @@ interface IEnv {
 
 const webpackConfig = (env: IEnv): Configuration => ({
   entry: './src/index.tsx',
-  ...(env.production || !env.development ? {} : { devtool: 'eval' }),
+  ...(env.production || !env.development ? {} : { devtool: 'eval-source-map' }),
   resolve: {
     extensions: ['.ts', '.tsx', '.js', 'jsx'],
     plugins: [new TsconfigPathsPlugin()],
+    alias: {
+      react: 'preact/compat',
+      'react-dom/test-utils': 'preact/test-utils',
+      'react-dom': 'preact/compat', // Must be below test-utils
+      'react/jsx-runtime': 'preact/jsx-runtime',
+    },
   },
   output: {
     path: path.join(__dirname, '/build'),
@@ -46,6 +52,12 @@ const webpackConfig = (env: IEnv): Configuration => ({
       logging: 'error',
     },
   },
+  performance: {
+    // https://github.com/webpack/webpack/issues/3486
+    // enable/disable/change if you want
+    maxEntrypointSize: 1000000,
+    maxAssetSize: 1000000,
+  },
   stats: {
     hash: true,
     timings: true,
@@ -64,6 +76,7 @@ const webpackConfig = (env: IEnv): Configuration => ({
   optimization: {
     moduleIds: 'deterministic',
     runtimeChunk: 'single',
+    concatenateModules: true,
     splitChunks: {
       cacheGroups: {
         vendor: {
