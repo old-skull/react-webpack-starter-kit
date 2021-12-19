@@ -1,4 +1,4 @@
-import { CharacterPage, CharactersPage } from '@features/characters';
+import { CharacterPage, CharactersPage, CreateCharacterPage } from '@features/characters';
 import { HomePage } from '@features/home';
 import { Layout } from '@features/layout';
 import { NotFoundPage } from '@features/not-found';
@@ -12,9 +12,15 @@ export const routes: RouteObject[] = [
       { index: true, element: <HomePage /> },
       {
         path: 'characters',
-        element: <CharactersPage />,
+        children: [
+          {
+            index: true,
+            element: <CharactersPage />,
+          },
+          { path: '/characters/:id', element: <CharacterPage /> },
+          { path: '/characters/new', element: <CreateCharacterPage /> },
+        ],
       },
-      { path: '/characters/:id', element: <CharacterPage /> },
       {
         path: '*',
         element: <NotFoundPage />,
