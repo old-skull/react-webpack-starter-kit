@@ -1,5 +1,5 @@
 import { ArrowRightIcon } from '@chakra-ui/icons';
-import { Avatar, Box, Flex, Heading, useColorMode } from '@chakra-ui/react';
+import { Avatar, Box, Flex, Text, useColorMode } from '@chakra-ui/react';
 import { ICharacter } from '@features/characters';
 import { Link } from '@shared/components';
 import { FC } from 'react';
@@ -41,9 +41,9 @@ export const CharacterCard: FC<ICharacterCard> = ({ character }) => {
           bg="transparent"
           aria-label={`${name} avatar`}
         />
-        <Heading as="h6" size="sm" isTruncated>
+        <Text fontWeight="bold" isTruncated>
           {name}
-        </Heading>
+        </Text>
       </Flex>
 
       <Flex
