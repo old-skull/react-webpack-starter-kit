@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "start": "webpack-cli serve --mode=development --port 3000 --env development --hot",
-    "build": "rimraf build && webpack-cli build --mode=production --env production",
+    "build": "rimraf build/* && webpack-cli build --mode=production --env production",
     "lint": "eslint \"./src/**/*.{ts,tsx}\" --fix",
     "format": "prettier --write \"./**/*.{ts,tsx}\""
   },
@@ -42,6 +42,7 @@
     "@types/webpack-dev-server": "^4.5.0",
     "@typescript-eslint/eslint-plugin": "^5.4.0",
     "@typescript-eslint/parser": "^5.4.0",
+    "copy-webpack-plugin": "^10.2.0",
     "css-loader": "^6.5.1",
     "eslint": "^8.3.0",
     "eslint-plugin-react": "^7.27.1",

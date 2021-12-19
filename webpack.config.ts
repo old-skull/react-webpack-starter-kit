@@ -1,3 +1,4 @@
+import CopyPlugin from 'copy-webpack-plugin';
 import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import path from 'path';
@@ -130,6 +131,9 @@ const webpackConfig = (env: IEnv): Configuration => {
         eslint: {
           files: './src/**/*.{ts,tsx,js,jsx}',
         },
+      }),
+      new CopyPlugin({
+        patterns: [{ from: './public/robots.txt' }, { from: './public/favicon.ico' }],
       }),
     ],
   };
