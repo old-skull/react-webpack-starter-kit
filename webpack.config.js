@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 const TerserPlugin = require('terser-webpack-plugin');
 const { TsconfigPathsPlugin } = require('tsconfig-paths-webpack-plugin');
-const webpack = require('webpack');
+const { DefinePlugin } = require('webpack');
 const packageJson = require('./package.json');
 
 module.exports = env => {
@@ -103,6 +103,7 @@ module.exports = env => {
       new HtmlWebpackPlugin({
         inject: true,
         template: './public/index.html',
+        cache: true,
         minify: isProd
           ? {
               removeComments: true,
@@ -118,7 +119,7 @@ module.exports = env => {
             }
           : false,
       }),
-      new webpack.DefinePlugin({
+      new DefinePlugin({
         'process.env.PRODUCTION': isProd,
         'process.env.NAME': JSON.stringify(packageJson.name),
         'process.env.VERSION': JSON.stringify(packageJson.version),
