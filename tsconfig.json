@@ -2,8 +2,8 @@
   "compilerOptions": {
     "rootDir": ".",
     "skipLibCheck": true,
-    "module": "commonjs",
-    "target": "ES5",
+    "module": "ESNext",
+    "target": "ESNext",
     "lib": ["esnext", "dom", "dom.iterable"],
     "removeComments": true,
     "allowSyntheticDefaultImports": true,
@@ -20,5 +20,5 @@
     }
   },
   "include": ["./src/**/*.ts", "./src/**/*.tsx"],
-  "exclude": ["node_modules", "webpack.config.ts"]
+  "exclude": ["node_modules"]
 }

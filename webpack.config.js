@@ -1,18 +1,14 @@
-import CopyPlugin from 'copy-webpack-plugin';
-import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
-import HtmlWebpackPlugin from 'html-webpack-plugin';
-import path from 'path';
-import TerserPlugin from 'terser-webpack-plugin';
-import { TsconfigPathsPlugin } from 'tsconfig-paths-webpack-plugin';
-import webpack, { Configuration } from 'webpack';
-import * as packageJson from './package.json';
+/* eslint-disable @typescript-eslint/no-var-requires */
+const CopyPlugin = require('copy-webpack-plugin');
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path');
+const TerserPlugin = require('terser-webpack-plugin');
+const { TsconfigPathsPlugin } = require('tsconfig-paths-webpack-plugin');
+const webpack = require('webpack');
+const packageJson = require('./package.json');
 
-interface IEnv {
-  production: string;
-  development: string;
-}
-
-const webpackConfig = (env: IEnv): Configuration => {
+module.exports = env => {
   const isDev = env.development;
   const isProd = env.production;
 
@@ -91,7 +87,7 @@ const webpackConfig = (env: IEnv): Configuration => {
           },
         },
       },
-      minimize: isProd ? true : false,
+      minimize: isProd,
       minimizer: [
         new TerserPlugin({
           extractComments: false,
@@ -133,10 +129,8 @@ const webpackConfig = (env: IEnv): Configuration => {
         },
       }),
       new CopyPlugin({
-        patterns: [{ from: './public/robots.txt' }, { from: './public/favicon.ico' }],
+        patterns: [{ from: './public/robots.txt' }, { from: './public/favicon.svg' }],
       }),
     ],
   };
 };
-
-export default webpackConfig;
