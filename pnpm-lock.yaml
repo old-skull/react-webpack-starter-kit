@@ -53,8 +53,6 @@ dependencies:
   '@reduxjs/toolkit': 1.6.2_react-redux@7.2.6+react@17.0.2
   framer-motion: 4.1.17_react-dom@17.0.2+react@17.0.2
   preact: 10.6.4
-  react: 17.0.2
-  react-dom: 17.0.2_react@17.0.2
   react-redux: 7.2.6_react-dom@17.0.2+react@17.0.2
   react-router-dom: 6.0.2_react-dom@17.0.2+react@17.0.2
   redux: 4.1.2
@@ -79,6 +77,8 @@ devDependencies:
   fork-ts-checker-webpack-plugin: 6.4.1_38617acf26106dca33bfe5f0320eb5cd
   html-webpack-plugin: 5.5.0_webpack@5.64.2
   prettier: 2.4.1
+  react: 17.0.2
+  react-dom: 17.0.2_react@17.0.2
   rimraf: 3.0.2
   sass: 1.43.4
   sass-loader: 12.3.0_sass@1.43.4+webpack@5.64.2
@@ -5481,7 +5481,7 @@ packages:
       object-assign: 4.1.1
       react: 17.0.2
       scheduler: 0.20.2
-    dev: false
+    dev: true
 
   /react-fast-compare/3.2.0:
     resolution: {integrity: sha512-rtGImPZ0YyLrscKI9xTpV8psd6I8VAtjKCzQDlzyDvqJA8XOW78TXYQwNRNd8g8JZnDu8q9Fu/1v4HPAVwVdHA==}
@@ -5610,7 +5610,7 @@ packages:
     dependencies:
       loose-envify: 1.4.0
       object-assign: 4.1.1
-    dev: false
+    dev: true
 
   /readable-stream/2.3.7:
     resolution: {integrity: sha512-Ebho8K4jIbHAxnuxi7o42OrZgF/ZTNcsZj6nRKyUmkhLFq8CHItp/fy6hQZuZmP/n3yZ9VBUbp4zz/mX8hmYPw==}
@@ -5843,7 +5843,7 @@ packages:
     dependencies:
       loose-envify: 1.4.0
       object-assign: 4.1.1
-    dev: false
+    dev: true
 
   /schema-utils/2.7.0:
     resolution: {integrity: sha512-0ilKFI6QQF5nxDZLFn2dMjvc4hjg/Wkg7rHd3jK6/A4a1Hl9VFdQWvgB1UMGoU94pad1P/8N7fMcEnLnSiju8A==}
