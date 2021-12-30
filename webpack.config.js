@@ -124,11 +124,7 @@ module.exports = env => {
         'process.env.NAME': JSON.stringify(packageJson.name),
         'process.env.VERSION': JSON.stringify(packageJson.version),
       }),
-      new ForkTsCheckerWebpackPlugin({
-        eslint: {
-          files: './src/**/*.{ts,tsx,js,jsx}',
-        },
-      }),
+      new ForkTsCheckerWebpackPlugin(),
       new CopyPlugin({
         patterns: [{ from: './public/robots.txt' }, { from: './public/favicon.svg' }],
       }),
