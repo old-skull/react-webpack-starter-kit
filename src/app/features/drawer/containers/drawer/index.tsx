@@ -7,7 +7,7 @@ import {
   DrawerOverlay,
   Flex,
 } from '@chakra-ui/react';
-import { DrawerMenu, IDrawerLink } from '@features/drawer';
+import { NavigationMenu } from '@features/navigation-menu';
 import { ThemeSwitch } from '@features/theme';
 import { FC, RefObject } from 'react';
 
@@ -18,11 +18,6 @@ interface IDrawer {
 }
 
 export const Drawer: FC<IDrawer> = ({ isOpen, onClose, finalRef }) => {
-  const drawerMenuLinks: IDrawerLink[] = [
-    { to: '/', label: 'Home' },
-    { to: '/characters', label: 'Characters' },
-  ];
-
   return (
     <ChakraDrawer
       isOpen={isOpen}
@@ -43,7 +38,7 @@ export const Drawer: FC<IDrawer> = ({ isOpen, onClose, finalRef }) => {
         </DrawerHeader>
 
         <DrawerBody>
-          <DrawerMenu navLinks={drawerMenuLinks} onClose={onClose} />
+          <NavigationMenu clickHanlder={onClose} />
         </DrawerBody>
       </DrawerContent>
     </ChakraDrawer>
