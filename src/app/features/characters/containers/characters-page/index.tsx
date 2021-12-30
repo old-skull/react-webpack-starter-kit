@@ -1,5 +1,10 @@
-import { Heading, Stack } from '@chakra-ui/react';
-import { charactersActions, CharactersList, charactersSelectors } from '@features/characters';
+import { Stack } from '@chakra-ui/react';
+import {
+  charactersActions,
+  CharactersList,
+  charactersSelectors,
+  CharactersTitle,
+} from '@features/characters';
 import { useDocumentTitle } from '@shared/hooks';
 import { FC } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
@@ -18,9 +23,7 @@ export const CharactersPage: FC<unknown> = () => {
 
   return (
     <Stack spacing={4}>
-      <Heading size="md">
-        {pageTitle}: {charactersLength}
-      </Heading>
+      <CharactersTitle title={pageTitle} charactersCount={charactersLength} />
       <CharactersList characters={characters} loaded={loaded} />
     </Stack>
   );

@@ -8,9 +8,11 @@ interface IHeader {
 }
 
 export const Header: FC<IHeader> = ({ onOpen }) => {
+  const title = 'Witcher';
+
   return (
     <Flex as="header" gridGap={4} justify="space-between">
-      <HeaderTitle>Witcher</HeaderTitle>
+      <HeaderTitle title={title} />
       <DrawerOpenBtn onOpen={onOpen} />
     </Flex>
   );

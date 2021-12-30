@@ -6,9 +6,5 @@ export const HomePage: FC<unknown> = () => {
   const title = 'Home';
   useDocumentTitle(title);
 
-  return (
-    <div>
-      <Heading size="md">Home</Heading>
-    </div>
-  );
+  return <Heading size="md">{title}</Heading>;
 };

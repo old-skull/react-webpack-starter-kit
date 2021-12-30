@@ -12,7 +12,6 @@ export const Layout: FC<unknown> = () => {
     <Stack direction="column" p={4} spacing={6}>
       <Header onOpen={onOpen} />
       <Outlet />
-
       <Drawer isOpen={isOpen} onClose={onClose} finalRef={btnRef} />
     </Stack>
   );

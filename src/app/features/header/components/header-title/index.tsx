@@ -3,11 +3,11 @@ import { Link } from '@shared/components';
 import { FC, ReactNode } from 'react';
 
 interface IHeaderTitle {
-  children: ReactNode;
+  title: ReactNode;
 }
 
-export const HeaderTitle: FC<IHeaderTitle> = ({ children }) => (
+export const HeaderTitle: FC<IHeaderTitle> = ({ title }) => (
   <Heading as="h1" size="xl">
-    <Link to="/">{children}</Link>
+    <Link to="/">{title}</Link>
   </Heading>
 );

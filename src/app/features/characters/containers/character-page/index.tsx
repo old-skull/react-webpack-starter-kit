@@ -1,5 +1,5 @@
-import { Code, Heading, Stack } from '@chakra-ui/react';
-import { charactersSelectors } from '@features/characters';
+import { Stack } from '@chakra-ui/react';
+import { CharacterDescription, charactersSelectors, CharacterTitle } from '@features/characters';
 import { RootState } from '@store';
 import { FC } from 'react';
 import { useSelector } from 'react-redux';
@@ -11,15 +11,8 @@ export const CharacterPage: FC<unknown> = () => {
 
   return character ? (
     <Stack spacing={4}>
-      <Heading size="md">
-        {character.name} <Code>#{id}</Code>
-      </Heading>
-
-      <Stack spacing={2}>
-        {character.description.map((d, i) => (
-          <p key={i}>{d}</p>
-        ))}
-      </Stack>
+      <CharacterTitle name={character.name} id={character.id} />
+      <CharacterDescription description={character.description} />
     </Stack>
   ) : (
     <Navigate to="/404" />
