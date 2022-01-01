@@ -6,6 +6,7 @@ import {
   charactersSelectors,
   CharacterTitle,
 } from '@features/characters';
+import { useDocumentTitle } from '@shared/hooks';
 import { RootState } from '@store';
 import { FC } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
@@ -27,6 +28,8 @@ export const CharacterPage: FC<unknown> = () => {
   if (!character) return <Navigate to="/404" />;
 
   const { name, description } = character;
+
+  useDocumentTitle(name);
 
   return (
     <Stack spacing={4}>
