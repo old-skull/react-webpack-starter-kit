@@ -1,20 +1,40 @@
-import { Stack } from '@chakra-ui/react';
-import { CharacterDescription, charactersSelectors, CharacterTitle } from '@features/characters';
+import { Flex, Stack } from '@chakra-ui/react';
+import {
+  CharacterDeleteBtn,
+  CharacterDescription,
+  charactersActions,
+  charactersSelectors,
+  CharacterTitle,
+} from '@features/characters';
 import { RootState } from '@store';
 import { FC } from 'react';
-import { useSelector } from 'react-redux';
-import { Navigate, useParams } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { Navigate, useNavigate, useParams } from 'react-router-dom';
 
 export const CharacterPage: FC<unknown> = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
+
   const character = useSelector((state: RootState) => charactersSelectors.selectById(state, id));
 
-  return character ? (
+  const dispatch = useDispatch();
+
+  const handleDelete = () => {
+    dispatch(charactersActions.removeOne(id));
+    navigate('/characters');
+  };
+
+  if (!character) return <Navigate to="/404" />;
+
+  const { name, description } = character;
+
+  return (
     <Stack spacing={4}>
-      <CharacterTitle name={character.name} id={character.id} />
-      <CharacterDescription description={character.description} />
+      <CharacterTitle name={name} id={id} />
+      <CharacterDescription description={description} />
+      <Flex>
+        <CharacterDeleteBtn handleDelete={handleDelete} />
+      </Flex>
     </Stack>
-  ) : (
-    <Navigate to="/404" />
   );
 };
