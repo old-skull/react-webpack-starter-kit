@@ -11,7 +11,7 @@ import {
 import { FC } from 'react';
 import { useForm } from 'react-hook-form';
 
-export const CreateCharacterForm: FC<unknown> = () => {
+export const CharacterCreateForm: FC<unknown> = () => {
   const {
     register,
     handleSubmit,

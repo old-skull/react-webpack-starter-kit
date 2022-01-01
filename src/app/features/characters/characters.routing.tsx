@@ -1,5 +1,5 @@
 import { RouteObject } from 'react-router-dom';
-import { CharacterPage, CharactersPage, CreateCharacterPage } from './index';
+import { CharacterCreatePage, CharacterPage, CharactersPage } from './index';
 
 export const charactersRouting: RouteObject[] = [
   {
@@ -10,7 +10,7 @@ export const charactersRouting: RouteObject[] = [
         element: <CharactersPage />,
       },
       { path: '/characters/:id', element: <CharacterPage /> },
-      { path: '/characters/new', element: <CreateCharacterPage /> },
+      { path: '/characters/new', element: <CharacterCreatePage /> },
     ],
   },
 ];
