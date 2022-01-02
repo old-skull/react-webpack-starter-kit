@@ -8,10 +8,16 @@ import {
   Stack,
   Textarea,
 } from '@chakra-ui/react';
+import { charactersActions, ICharacter } from '@features/characters';
 import { FC } from 'react';
 import { useForm } from 'react-hook-form';
+import { useDispatch } from 'react-redux';
 
-export const CharacterCreateForm: FC<unknown> = () => {
+interface ICharacterCreateForm {
+  navigate: () => void;
+}
+
+export const CharacterCreateForm: FC<ICharacterCreateForm> = ({ navigate }) => {
   const {
     register,
     handleSubmit,
@@ -19,30 +25,47 @@ export const CharacterCreateForm: FC<unknown> = () => {
     formState: { errors, isSubmitting },
   } = useForm({
     defaultValues: {
-      characterName: '',
-      characterDescription: '',
+      name: '',
+      description: '',
+      caption: '',
+      avatar: '',
     },
   });
 
-  const onSubmit = values => console.log(values);
+  const dispatch = useDispatch();
+
+  const onSubmit = (values: ICharacter) => {
+    dispatch(charactersActions.addOne({ id: values.name, ...values }));
+    navigate();
+  };
 
   return (
     <Stack as="form" spacing={4} onSubmit={handleSubmit(onSubmit)}>
-      <FormControl isInvalid={!!errors.characterName}>
-        <FormLabel htmlFor="characterName">Name *</FormLabel>
+      <FormControl isInvalid={!!errors.name}>
+        <FormLabel htmlFor="name">Name *</FormLabel>
         <Input
-          id="characterName"
-          {...register('characterName', {
+          id="name"
+          {...register('name', {
             required: 'This is required',
             minLength: { value: 2, message: 'Minimum length should be 2' },
           })}
         />
-        <FormErrorMessage>{errors.characterName && errors.characterName.message}</FormErrorMessage>
+        <FormErrorMessage>{errors.name && errors.name.message}</FormErrorMessage>
       </FormControl>
 
       <FormControl>
-        <FormLabel htmlFor="characterDescription">Description</FormLabel>
-        <Textarea id="characterDescription" {...register('characterDescription')} />
+        <FormLabel htmlFor="description">Description</FormLabel>
+        <Textarea id="description" {...register('description')} />
+      </FormControl>
+
+      <FormControl>
+        <FormLabel htmlFor="caption">Caption</FormLabel>
+        <Input id="caption" {...register('caption')} />
+      </FormControl>
+
+      <FormControl>
+        <FormLabel htmlFor="avatar">Avatar</FormLabel>
+        <Input id="avatar" {...register('avatar')} />
       </FormControl>
 
       <Flex gridGap={2} justifyContent="space-between">
