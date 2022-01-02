@@ -2,6 +2,7 @@ import { Flex, Stack } from '@chakra-ui/react';
 import {
   CharacterDeleteBtn,
   CharacterDescription,
+  CharacterEditBtn,
   charactersActions,
   charactersSelectors,
   CharacterTitle,
@@ -35,8 +36,9 @@ export const CharacterPage: FC<unknown> = () => {
     <Stack spacing={4}>
       <CharacterTitle name={name} id={id} />
       <CharacterDescription description={description} />
-      <Flex>
+      <Flex gridGap={4}>
         <CharacterDeleteBtn handleDelete={handleDelete} />
+        <CharacterEditBtn id={id} />
       </Flex>
     </Stack>
   );
