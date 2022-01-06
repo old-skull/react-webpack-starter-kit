@@ -1,0 +1,8 @@
+{
+  "testFiles": "**/*.e2e-spec.ts",
+  "baseUrl": "http://localhost:3000",
+  "component": {
+    "testFiles": "**/*.spec.{ts,tsx}",
+    "componentFolder": "src"
+  }
+}
