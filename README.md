@@ -9,7 +9,7 @@
   - [x] React-Router v6
 - [x] Redux + Redux Tool Kit
   - [x] EntityAdapter
-  - [] Query
+  - [ ] Query
 - [x] Typescript
 - [ ] GraphQL
   - [ ] Cache
