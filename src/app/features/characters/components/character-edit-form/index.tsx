@@ -23,6 +23,7 @@ export const CharacterEditForm: FC<ICharacterEditForm> = ({ character, navigate 
     register,
     handleSubmit,
     reset,
+    getValues,
     formState: { errors, isSubmitting },
   } = useForm({
     defaultValues: character,
@@ -54,9 +55,20 @@ export const CharacterEditForm: FC<ICharacterEditForm> = ({ character, navigate 
         <Textarea id="description" {...register('description')} />
       </FormControl>
 
-      <FormControl>
+      <FormControl isInvalid={!!errors.caption}>
         <FormLabel htmlFor="caption">Caption</FormLabel>
-        <Input id="caption" {...register('caption')} />
+        <Input
+          id="caption"
+          {...register('caption', {
+            maxLength: {
+              value: 150,
+              message: `Maximum length should be 150. Current length ${
+                getValues('caption').length
+              }`,
+            },
+          })}
+        />
+        <FormErrorMessage>{errors.caption && errors.caption.message}</FormErrorMessage>
       </FormControl>
 
       <FormControl>

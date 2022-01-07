@@ -8,9 +8,9 @@ export const NotFoundPage: FC<unknown> = () => {
     <Stack spacing={4} alignItems="center">
       <NotFoundTitle />
       <NotFoundRoute />
-      <Link to="/">
-        <Button>Go Home</Button>
-      </Link>
+      <Button as={Link} to="/">
+        Go Home
+      </Button>
     </Stack>
   );
 };
