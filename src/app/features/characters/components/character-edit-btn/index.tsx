@@ -8,8 +8,13 @@ interface CharacterEditBtn {
 
 export const CharacterEditBtn: FC<CharacterEditBtn> = ({ id }) => {
   return (
-    <Link to={`/characters/edit/${id}`} _hover={{ textDecoration: 'none' }}>
-      <Button colorScheme="teal">Edit</Button>
-    </Link>
+    <Button
+      as={Link}
+      colorScheme="teal"
+      to={`/characters/edit/${id}`}
+      _hover={{ textDecoration: 'none' }}
+    >
+      Edit
+    </Button>
   );
 };
