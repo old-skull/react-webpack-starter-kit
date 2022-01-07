@@ -24,7 +24,8 @@
 
 ## UI
 
-- [x] Chakra-UI
+- [x] Chakra UI
+- [x] Chakra UI icons
 
 ## Styles
 
@@ -33,7 +34,10 @@
 
 ## Tests
 
-- [x] Cypress(unit + e2e)
+- [x] Cypress
+  - [x] Unit
+  - [x] e2e
+  - [ ] Cypress dashboard
 
 ## Styleguide
 
@@ -43,7 +47,13 @@
 ## CI
 
 - [ ] Github Actions
+  - [ ] Build
+  - [ ] Unit tests
+  - [ ] e2e tests
+  - [ ] Coverage
+  - [ ] Deploy
 
 ## Utils
 
-- [ ] Husky + pre-commit
+- [ ] Husky
+  - [ ] Pre-commit(lint + format)
