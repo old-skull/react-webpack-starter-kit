@@ -55,5 +55,5 @@
 
 ## Utils
 
-- [ ] Husky
-  - [ ] Pre-commit(lint + format)
+- [x] Husky
+  - [x] Pre-commit(lint + format)

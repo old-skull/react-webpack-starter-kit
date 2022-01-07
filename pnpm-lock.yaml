@@ -27,6 +27,7 @@ specifiers:
   fork-ts-checker-webpack-plugin: ^6.4.1
   framer-motion: ^4
   html-webpack-plugin: ^5.5.0
+  husky: ^7.0.0
   preact: ^10.6.4
   prettier: ^2.4.1
   react: ^17.0.2
@@ -82,6 +83,7 @@ devDependencies:
   eslint-plugin-react: 7.27.1_eslint@8.3.0
   fork-ts-checker-webpack-plugin: 6.4.1_38617acf26106dca33bfe5f0320eb5cd
   html-webpack-plugin: 5.5.0_webpack@5.64.2
+  husky: 7.0.4
   prettier: 2.4.1
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
@@ -5184,6 +5186,12 @@ packages:
   /human-signals/2.1.0:
     resolution: {integrity: sha512-B4FFZ6q/T2jhhksgkbEW3HBvWIfDW85snkQgawt07S7J5QXTk6BkNV+0yAeZrM5QpMAdYlocGoljn0sJ/WQkFw==}
     engines: {node: '>=10.17.0'}
+    dev: true
+
+  /husky/7.0.4:
+    resolution: {integrity: sha512-vbaCKN2QLtP/vD4yvs6iz6hBEo6wkSzs8HpRah1Z6aGmF2KW5PdYuAd7uX5a+OyBZHBhd+TFLqgjUgytQr4RvQ==}
+    engines: {node: '>=12'}
+    hasBin: true
     dev: true
 
   /iconv-lite/0.4.24:
