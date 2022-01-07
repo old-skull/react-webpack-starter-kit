@@ -2,7 +2,9 @@
 
 🏗🏗🏗 **_Work in progress_** 🏗🏗🏗
 
-## Core
+## About
+
+### Core
 
 - [x] React + Preact(as compatibility layer)
   - [x] [preact/compat](https://preactjs.com/guide/v10/switching-to-preact)
@@ -22,29 +24,33 @@
   - [x] TsconfigPathsPlugin
   - [x] Sass/Scss
 
-## UI
+### UI
 
 - [x] Chakra UI
 - [x] Chakra UI icons
 
-## Styles
+### Styles
 
 - [x] Chakra-UI inline
 - [x] Sass/Scss
 
-## Tests
+### Tests
 
 - [x] Cypress
   - [x] Unit
   - [x] e2e
   - [ ] Cypress dashboard
+- [x] Run application before e2e using `start-server-and-test`
+- [ ] Generate coverage report
+  - [ ] Unit
+  - [ ] e2e
 
-## Styleguide
+### Styleguide
 
 - [x] ESLint
 - [x] Prettier
 
-## CI
+### CI
 
 - [ ] Github Actions
   - [ ] Build
@@ -53,7 +59,45 @@
   - [ ] Coverage
   - [ ] Deploy
 
-## Utils
+### Utils
 
 - [x] Husky
   - [x] Pre-commit(lint + format)
+
+## Availible scripts
+
+### Start in dev mode
+
+```bash
+pnpm start
+```
+
+### Build for production
+
+```bash
+pnpm build
+```
+
+### Format via prettier
+
+```bash
+pnpm format
+```
+
+### Lint via ESLint
+
+```bash
+pnpm lint
+```
+
+### Run unit tests
+
+```bash
+pnpm cypress:unit
+```
+
+### Run e2e tests
+
+```bash
+pnpm cypress:e2e
+```
