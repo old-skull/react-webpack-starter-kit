@@ -2,7 +2,6 @@
 const path = require('path');
 
 module.exports = {
-  mode: 'development',
   devtool: false,
   resolve: {
     extensions: ['.ts', '.tsx', '.js'],
