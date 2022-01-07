@@ -6,53 +6,60 @@
 
 ### Core
 
-- [x] React + Preact(as compatibility layer)
+- [x] [React](https://reactjs.org/) + [Preact](https://preactjs.com/)(as compatibility layer)
   - [x] [preact/compat](https://preactjs.com/guide/v10/switching-to-preact)
-  - [x] React-Router v6
-- [x] Redux + Redux Tool Kit
-  - [x] EntityAdapter
-  - [ ] Query
-- [x] Typescript
-- [ ] GraphQL
-  - [ ] Cache
-  - [ ] Auth
-- [x] Webpack
-  - [x] ForkTsCheckerWebpackPlugin
-  - [x] CopyPlugin
-  - [x] HtmlWebpackPlugin
-  - [x] TerserPlugin
-  - [x] TsconfigPathsPlugin
-  - [x] Sass/Scss
+  - [x] [React-Router v6](https://reactrouterdotcom.fly.dev/docs/en/v6)
+- [x] [Redux](https://redux.js.org/) + [Redux Tool Kit](https://redux-toolkit.js.org/)
+  - [x] [EntityAdapter](https://redux-toolkit.js.org/api/createEntityAdapter#overview)
+  - [ ] [Query](https://redux-toolkit.js.org/rtk-query/overview)
+- [x] [Typescript](https://www.typescriptlang.org/)
+- [ ] [GraphQL](https://graphql.org/)
+  - [ ] [Apollo](https://www.apollographql.com/)
+  - [ ] [Codegen](https://www.graphql-code-generator.com/)
+  - [ ] [Cache](https://www.apollographql.com/docs/react/caching/overview/)
+  - [ ] [Auth](https://www.apollographql.com/docs/apollo-server/security/authentication/)
+- [x] [Webpack](https://webpack.js.org/)
+  - [x] [ForkTsCheckerWebpackPlugin](https://github.com/TypeStrong/fork-ts-checker-webpack-plugin)
+  - [x] [CopyPlugin](https://webpack.js.org/plugins/copy-webpack-plugin/)
+  - [x] [HtmlWebpackPlugin](https://webpack.js.org/plugins/html-webpack-plugin/)
+  - [x] [TerserPlugin](https://webpack.js.org/plugins/terser-webpack-plugin/)
+  - [x] [TsconfigPathsPlugin](https://github.com/dividab/tsconfig-paths-webpack-plugin)
+  - [x] [Sass/Scss](https://webpack.js.org/loaders/sass-loader/)
+- [x] [PNPM](https://pnpm.io/)
 
 ### UI
 
-- [x] Chakra UI
-- [x] Chakra UI icons
+- [x] [Chakra UI](https://chakra-ui.com/)
+- [x] [Chakra UI icons](https://chakra-ui.com/docs/media-and-icons/icon#all-icons)
 
 ### Styles
 
-- [x] Chakra-UI inline
-- [x] Sass/Scss
+- [x] [Chakra-UI style props](https://chakra-ui.com/docs/features/style-props)
+- [x] [Sass/Scss](https://sass-lang.com/)
+
+### Forms
+
+- [x] [React Hook Form](https://react-hook-form.com/)
 
 ### Tests
 
-- [x] Cypress
-  - [x] Unit
-  - [x] e2e
-  - [ ] Cypress dashboard
-- [x] Run application before e2e using `start-server-and-test`
+- [x] [Cypress](https://www.cypress.io/)
+  - [x] [Unit](https://docs.cypress.io/guides/component-testing/introduction#What-is-Component-Testing)
+  - [x] [e2e](https://docs.cypress.io/examples/examples/workshop#End-to-end-Testing-with-Cypress-io)
+  - [ ] [Dashboard](https://docs.cypress.io/faq/questions/dashboard-faq)
+- [x] Run application before e2e using [start-server-and-test](https://www.npmjs.com/package/start-server-and-test)
 - [ ] Generate coverage report
-  - [ ] Unit
-  - [ ] e2e
+  - [ ] [Unit](https://docs.cypress.io/guides/tooling/code-coverage)
+  - [ ] [e2e](https://docs.cypress.io/guides/tooling/code-coverage#E2E-code-coverage)
 
 ### Styleguide
 
-- [x] ESLint
-- [x] Prettier
+- [x] [ESLint](https://eslint.org/)
+- [x] [Prettier](https://prettier.io/)
 
 ### CI
 
-- [ ] Github Actions
+- [ ] [Github Actions](https://docs.github.com/en/actions)
   - [ ] Build
   - [ ] Unit tests
   - [ ] e2e tests
@@ -61,10 +68,10 @@
 
 ### Utils
 
-- [x] Husky
+- [x] [Husky](https://typicode.github.io/husky/#/)
   - [x] Pre-commit(lint + format)
 
-## Availible scripts
+## Available scripts
 
 ### Start in dev mode
 
