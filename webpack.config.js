@@ -36,9 +36,11 @@ module.exports = env => {
           test: /\.tsx?$/,
           loader: 'ts-loader',
           options: {
+            // https://github.com/TypeStrong/ts-loader#transpileonly
+            // use ts-loader for transpilation and ForkChecker for type check
             transpileOnly: true,
           },
-          exclude: /build/,
+          exclude: /node_modules/,
         },
         {
           test: /\.s[ac]ss$/i,
