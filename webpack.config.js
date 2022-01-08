@@ -34,13 +34,12 @@ module.exports = env => {
       rules: [
         {
           test: /\.tsx?$/,
-          loader: 'ts-loader',
-          options: {
-            // https://github.com/TypeStrong/ts-loader#transpileonly
-            // use ts-loader for transpilation and ForkChecker for type check
-            transpileOnly: true,
-          },
           exclude: /node_modules/,
+          use: {
+            // https://swc.rs/docs/configuration/swcrc
+            // configure via .swcrc
+            loader: 'swc-loader',
+          },
         },
         {
           test: /\.s[ac]ss$/i,

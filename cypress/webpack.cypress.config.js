@@ -15,15 +15,10 @@ module.exports = {
     rules: [
       {
         test: /\.tsx?$/,
-        exclude: [/node_modules/],
-        use: [
-          {
-            loader: 'ts-loader',
-            options: {
-              transpileOnly: true,
-            },
-          },
-        ],
+        exclude: /node_modules/,
+        use: {
+          loader: 'swc-loader',
+        },
       },
       {
         test: /\.s[ac]ss$/i,
