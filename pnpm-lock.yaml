@@ -21,6 +21,7 @@ specifiers:
   cross-env: ^7.0.3
   css-loader: ^6.5.1
   cypress: ^9.2.0
+  cypress-real-events: ^1.6.0
   eslint: ^8.3.0
   eslint-plugin-react: ^7.27.1
   fork-ts-checker-webpack-plugin: ^6.4.1
@@ -78,6 +79,7 @@ devDependencies:
   cross-env: 7.0.3
   css-loader: 6.5.1_webpack@5.64.2
   cypress: 9.2.0
+  cypress-real-events: 1.6.0_cypress@9.2.0
   eslint: 8.3.0
   eslint-plugin-react: 7.27.1_eslint@8.3.0
   fork-ts-checker-webpack-plugin: 6.4.1_38617acf26106dca33bfe5f0320eb5cd
@@ -2944,6 +2946,14 @@ packages:
 
   /csstype/3.0.10:
     resolution: {integrity: sha512-2u44ZG2OcNUO9HDp/Jl8C07x6pU/eTR3ncV91SiK3dhG9TWvRVsCoJw14Ckx5DgWkzGA3waZWO3d7pgqpUI/XA==}
+
+  /cypress-real-events/1.6.0_cypress@9.2.0:
+    resolution: {integrity: sha512-QxXm0JsQkCrb2uH+fMXNDQ5kNWTzX3OtndBafdsZmNV19j+6JuTK9n52B1YVxrDrr/qzPAojcHJc5PNoQvwp+w==}
+    peerDependencies:
+      cypress: ^4.x || ^5.x || ^6.x || ^7.x || ^8.x || ^9.x
+    dependencies:
+      cypress: 9.2.0
+    dev: true
 
   /cypress/9.2.0:
     resolution: {integrity: sha512-Jn26Tprhfzh/a66Sdj9SoaYlnNX6Mjfmj5PHu2a7l3YHXhrgmavM368wjCmgrxC6KHTOv9SpMQGhAJn+upDViA==}
