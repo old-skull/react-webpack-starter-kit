@@ -25,6 +25,7 @@
   - [x] [TerserPlugin](https://webpack.js.org/plugins/terser-webpack-plugin/)
   - [x] [TsconfigPathsPlugin](https://github.com/dividab/tsconfig-paths-webpack-plugin)
   - [x] [Sass/Scss](https://webpack.js.org/loaders/sass-loader/)
+  - [x] [swc-loader](https://github.com/swc-project/swc-loader)
 - [x] [PNPM](https://pnpm.io/)
 
 ### UI
