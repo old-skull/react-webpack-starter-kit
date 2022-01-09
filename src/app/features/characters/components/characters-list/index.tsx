@@ -8,7 +8,7 @@ interface ICharactersList {
 }
 
 export const CharactersList: FC<ICharactersList> = ({ characters, loaded }) => (
-  <SimpleGrid spacing={4} columns={[1, 1, 2, 3]}>
+  <SimpleGrid className="characters-list" spacing={4} columns={[1, 1, 2, 3]}>
     {characters.map(c => (
       <Skeleton key={c.id} isLoaded={loaded}>
         <CharacterCard character={c} />

@@ -7,5 +7,10 @@ interface IDrawerOpenBtn {
 }
 
 export const DrawerOpenBtn: FC<IDrawerOpenBtn> = ({ onOpen }) => (
-  <IconButton aria-label="Open drawer" onClick={onOpen} icon={<HamburgerIcon />} />
+  <IconButton
+    className="drawer-open-btn"
+    aria-label="Open drawer"
+    onClick={onOpen}
+    icon={<HamburgerIcon />}
+  />
 );

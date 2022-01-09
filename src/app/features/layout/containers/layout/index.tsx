@@ -9,7 +9,7 @@ export const Layout: FC<unknown> = () => {
   const btnRef = useRef<HTMLButtonElement>(null);
 
   return (
-    <Stack direction="column" p={4} spacing={6}>
+    <Stack className="layout" direction="column" p={4} spacing={6}>
       <Header onOpen={onOpen} />
       <Outlet />
       <Drawer isOpen={isOpen} onClose={onClose} finalRef={btnRef} />

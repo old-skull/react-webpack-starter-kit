@@ -40,7 +40,12 @@ export const CharacterCreateForm: FC<ICharacterCreateForm> = ({ navigate }) => {
   };
 
   return (
-    <Stack as="form" spacing={4} onSubmit={handleSubmit(onSubmit)}>
+    <Stack
+      className="character-create-form"
+      as="form"
+      spacing={4}
+      onSubmit={handleSubmit(onSubmit)}
+    >
       <FormControl isInvalid={!!errors.name}>
         <FormLabel htmlFor="name">Name *</FormLabel>
         <Input

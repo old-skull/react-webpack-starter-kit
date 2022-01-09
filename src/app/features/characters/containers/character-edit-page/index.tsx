@@ -22,7 +22,7 @@ export const CharacterEditPage: FC<unknown> = () => {
   const onSubmit = () => navigate(`/characters/${id}`);
 
   return (
-    <Stack spacing={4}>
+    <Stack className="character-edit-page" spacing={4}>
       <Heading size="md">Edit character</Heading>
 
       <CharacterEditForm character={character} navigate={onSubmit} />

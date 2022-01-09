@@ -16,7 +16,7 @@ export const CharacterDeleteBtn: FC<ICharacterDeleteBtn> = ({ handleDelete }) =>
 
   return (
     <>
-      <Button colorScheme="red" onClick={onOpen}>
+      <Button className="character-delete-btn" colorScheme="red" onClick={onOpen}>
         Delete
       </Button>
       <CharacterDeleteModal onConfirm={deleteAndClose} isOpen={isOpen} onClose={onClose} />

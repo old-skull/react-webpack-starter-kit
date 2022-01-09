@@ -7,6 +7,7 @@ export const ThemeSwitch: FC<unknown> = () => {
 
   return (
     <IconButton
+      className="theme-switch"
       aria-label="Toggle theme"
       onClick={toggleColorMode}
       icon={colorMode === 'dark' ? <SunIcon /> : <MoonIcon />}

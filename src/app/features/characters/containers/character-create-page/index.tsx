@@ -13,7 +13,7 @@ export const CharacterCreatePage: FC<unknown> = () => {
   const onSubmit = () => navigate('/characters');
 
   return (
-    <Stack spacing={4}>
+    <Stack className="character-create-page" spacing={4}>
       <Heading size="md">Create character</Heading>
 
       <CharacterCreateForm navigate={onSubmit} />

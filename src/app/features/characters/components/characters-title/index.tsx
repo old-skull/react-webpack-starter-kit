@@ -7,7 +7,7 @@ interface ICharactersTitle {
 }
 
 export const CharactersTitle: FC<ICharactersTitle> = ({ title, charactersCount }) => (
-  <Heading size="md">
+  <Heading className="characters-title" size="md">
     {title}: {charactersCount}
   </Heading>
 );

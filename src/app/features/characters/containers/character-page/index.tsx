@@ -33,7 +33,7 @@ export const CharacterPage: FC<unknown> = () => {
   useDocumentTitle(name);
 
   return (
-    <Stack spacing={4}>
+    <Stack className="character-page" spacing={4}>
       <CharacterTitle name={name} id={id} />
       <CharacterDescription description={description} />
       <Flex gridGap={4}>

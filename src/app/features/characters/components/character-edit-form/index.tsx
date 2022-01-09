@@ -37,7 +37,7 @@ export const CharacterEditForm: FC<ICharacterEditForm> = ({ character, navigate 
   };
 
   return (
-    <Stack as="form" spacing={4} onSubmit={handleSubmit(onSubmit)}>
+    <Stack className="character-edit-form" as="form" spacing={4} onSubmit={handleSubmit(onSubmit)}>
       <FormControl isInvalid={!!errors.name}>
         <FormLabel htmlFor="name">Name *</FormLabel>
         <Input

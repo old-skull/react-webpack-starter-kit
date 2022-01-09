@@ -9,6 +9,7 @@ interface CharacterEditBtn {
 export const CharacterEditBtn: FC<CharacterEditBtn> = ({ id }) => {
   return (
     <Button
+      className="character-edit-btn"
       as={Link}
       colorScheme="teal"
       to={`/characters/edit/${id}`}

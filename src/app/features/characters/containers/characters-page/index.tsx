@@ -22,7 +22,7 @@ export const CharactersPage: FC<unknown> = () => {
   setTimeout(() => dispatch(charactersActions.setLoaded()), 1000);
 
   return (
-    <Stack spacing={4}>
+    <Stack className="characters-page" spacing={4}>
       <CharactersTitle title={pageTitle} charactersCount={charactersLength} />
       <CharactersList characters={characters} loaded={loaded} />
     </Stack>

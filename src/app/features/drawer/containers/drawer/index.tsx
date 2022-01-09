@@ -1,4 +1,5 @@
 import {
+  Box,
   Drawer as ChakraDrawer,
   DrawerBody,
   DrawerCloseButton,
@@ -19,28 +20,30 @@ interface IDrawer {
 
 export const Drawer: FC<IDrawer> = ({ isOpen, onClose, finalRef }) => {
   return (
-    <ChakraDrawer
-      isOpen={isOpen}
-      placement="left"
-      onClose={onClose}
-      finalFocusRef={finalRef}
-      closeOnEsc
-    >
-      <DrawerOverlay />
+    <Box className="drawer-container">
+      <ChakraDrawer
+        isOpen={isOpen}
+        placement="left"
+        onClose={onClose}
+        finalFocusRef={finalRef}
+        closeOnEsc
+      >
+        <DrawerOverlay />
 
-      <DrawerContent>
-        <DrawerHeader>
-          <DrawerCloseButton />
+        <DrawerContent>
+          <DrawerHeader>
+            <DrawerCloseButton />
 
-          <Flex gridGap={2} align="center">
-            <ThemeSwitch />
-          </Flex>
-        </DrawerHeader>
+            <Flex gridGap={2} align="center">
+              <ThemeSwitch />
+            </Flex>
+          </DrawerHeader>
 
-        <DrawerBody>
-          <NavigationMenu clickHanlder={onClose} />
-        </DrawerBody>
-      </DrawerContent>
-    </ChakraDrawer>
+          <DrawerBody>
+            <NavigationMenu clickHanlder={onClose} />
+          </DrawerBody>
+        </DrawerContent>
+      </ChakraDrawer>
+    </Box>
   );
 };

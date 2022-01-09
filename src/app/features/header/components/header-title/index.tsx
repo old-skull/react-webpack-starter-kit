@@ -7,7 +7,7 @@ interface IHeaderTitle {
 }
 
 export const HeaderTitle: FC<IHeaderTitle> = ({ title }) => (
-  <Heading as="h1" size="xl">
+  <Heading className="header-title" as="h1" size="xl">
     <Link to="/">{title}</Link>
   </Heading>
 );

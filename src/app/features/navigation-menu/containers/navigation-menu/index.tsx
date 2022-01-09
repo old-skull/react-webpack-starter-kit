@@ -9,7 +9,7 @@ interface INavigationMenu {
 
 export const NavigationMenu: FC<INavigationMenu> = ({ clickHanlder }) => {
   return (
-    <Stack spacing={2}>
+    <Stack className="navigation-menu" spacing={2}>
       {navigationLinks.map(({ to, label }) => (
         <NavLink to={to} key={`${to}_${label}`} onClick={clickHanlder}>
           {label}

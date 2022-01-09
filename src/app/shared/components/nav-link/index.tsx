@@ -26,6 +26,7 @@ export const NavLink: FC<INavLink> = ({ children, to, end, ...rest }) => {
 
   return (
     <ChakraLink
+      className="nav-link"
       as={RouterNavLink}
       to={normalizeHref(to)}
       style={{ color: isActive ? 'teal' : 'currentColor' }}

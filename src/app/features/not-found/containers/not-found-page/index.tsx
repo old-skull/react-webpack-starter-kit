@@ -5,7 +5,7 @@ import { FC } from 'react';
 
 export const NotFoundPage: FC<unknown> = () => {
   return (
-    <Stack spacing={4} alignItems="center">
+    <Stack className="not-found-page" spacing={4} alignItems="center">
       <NotFoundTitle />
       <NotFoundRoute />
       <Button as={Link} to="/">

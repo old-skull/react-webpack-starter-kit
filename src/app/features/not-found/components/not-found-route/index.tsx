@@ -6,7 +6,7 @@ export const NotFoundRoute: FC<unknown> = () => {
   const { pathname } = useLocation();
 
   return (
-    <Box textAlign="center">
+    <Box className="not-found-route" textAlign="center">
       <code>{pathname}</code>
     </Box>
   );
