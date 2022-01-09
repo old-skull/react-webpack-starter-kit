@@ -11,7 +11,7 @@ describe('Characters', () => {
 
   describe('Characters title', () => {
     it('should be visible', () => {
-      cy.contains('Characters:').should('be.visible');
+      cy.get('.characters-title').should('be.visible');
     });
 
     it('should display current number of cards', () => {
@@ -23,10 +23,11 @@ describe('Characters', () => {
 
   describe('Character card', () => {
     it('should show card caption on hover', () => {
-      cy.get(':nth-child(1) > .character-card')
+      cy.get('.character-card')
+        .first()
         .realHover()
         .then(() => {
-          cy.get(':nth-child(1) > .character-card > .character-card__caption').should('be.visible');
+          cy.get(':nth-child(1) > .character-card__caption').should('be.visible');
         });
     });
 
@@ -39,13 +40,13 @@ describe('Characters', () => {
     });
 
     it('should have visible image', () => {
-      cy.get(
-        '.character-card > .character-card__content > .chakra-avatar > .chakra-avatar__img',
-      ).should('be.visible');
+      cy.get('.character-card__content > .chakra-avatar > .chakra-avatar__img').should(
+        'be.visible',
+      );
     });
 
     it('should have visible title', () => {
-      cy.get('.character-card > .character-card__content > .chakra-text').should('be.visible');
+      cy.get('.character-card__content > .chakra-text').should('be.visible');
     });
   });
 });
