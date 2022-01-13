@@ -2,6 +2,13 @@
 
 🏗🏗🏗 **_Work in progress_** 🏗🏗🏗
 
+## Table of contents
+
+- [TOC](#table-of-contents)
+- [About](#about)
+- [Available scripts](#available-scripts)
+- [Q&A](#questions-and-answers)
+
 ## About
 
 ### Core
@@ -109,3 +116,13 @@ pnpm cypress:unit
 ```bash
 pnpm cypress:e2e
 ```
+
+## Questions and Answers
+
+### Why there is a tsconfig and webpack config under cypress folder?
+
+Cypress requires independent configuration for some tools.
+For example, we dont need to use full webpack config for tests and we need to include cypress types for typescript.
+
+Since(for this moment) kit uses swc-loader we also need to copy `.swcrc` file from root to the cypress folder.
+In the future there is could be the way to set path for .swcrc and use root config.
