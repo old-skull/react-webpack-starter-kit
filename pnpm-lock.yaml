@@ -43,7 +43,6 @@ specifiers:
   style-loader: ^3.3.1
   swc-loader: ^0.1.15
   terser-webpack-plugin: ^5.2.5
-  ts-loader: ^9.2.6
   tsconfig-paths-webpack-plugin: ^3.5.2
   typescript: ^4.5.2
   webpack: ^5.64.2
@@ -95,7 +94,6 @@ devDependencies:
   style-loader: 3.3.1_webpack@5.64.2
   swc-loader: 0.1.15_@swc+core@1.2.127+webpack@5.64.2
   terser-webpack-plugin: 5.2.5_@swc+core@1.2.127+webpack@5.64.2
-  ts-loader: 9.2.6_typescript@4.5.2+webpack@5.64.2
   tsconfig-paths-webpack-plugin: 3.5.2
   typescript: 4.5.2
   webpack: 5.64.2_59b8cb0ca6f3c654b279497fb3a31024
@@ -6775,21 +6773,6 @@ packages:
     dependencies:
       psl: 1.8.0
       punycode: 2.1.1
-    dev: true
-
-  /ts-loader/9.2.6_typescript@4.5.2+webpack@5.64.2:
-    resolution: {integrity: sha512-QMTC4UFzHmu9wU2VHZEmWWE9cUajjfcdcws+Gh7FhiO+Dy0RnR1bNz0YCHqhI0yRowCE9arVnNxYHqELOy9Hjw==}
-    engines: {node: '>=12.0.0'}
-    peerDependencies:
-      typescript: '*'
-      webpack: ^5.0.0
-    dependencies:
-      chalk: 4.1.2
-      enhanced-resolve: 5.8.3
-      micromatch: 4.0.4
-      semver: 7.3.5
-      typescript: 4.5.2
-      webpack: 5.64.2_59b8cb0ca6f3c654b279497fb3a31024
     dev: true
 
   /tsconfig-paths-webpack-plugin/3.5.2:
