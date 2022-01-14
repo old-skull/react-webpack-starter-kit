@@ -126,3 +126,13 @@ For example, we dont need to use full webpack config for tests and we need to in
 
 Since(for this moment) kit uses swc-loader we also need to copy `.swcrc` file from root to the cypress folder.
 In the future there is could be the way to set path for .swcrc and use root config.
+
+### What about images and favicons?
+
+I decided to focus on the tools and their configs. If you need to add some loaders or plugins feel free to customize webpack.config. For example you may want to add [favicon-webpack-plugin](https://github.com/jantimon/favicons-webpack-plugin). This plugin could generate different sets of favicons for you.
+
+### Why there is so much `index.ts`?
+
+I'm using concepts from [feature-sliced architecture](https://github.com/feature-sliced). You could delete or replace content from `src` folder and use your own naming strategy or architecture. I like short paths in imports and index.ts + ts-paths work perfect for me.
+
+Also check out [atomic-design pattern](https://bradfrost.com/blog/post/atomic-web-design/).
