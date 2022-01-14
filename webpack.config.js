@@ -91,6 +91,7 @@ module.exports = env => {
       minimize: isProd,
       minimizer: [
         new TerserPlugin({
+          parallel: true,
           extractComments: false,
           terserOptions: {
             format: {
