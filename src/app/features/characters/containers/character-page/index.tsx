@@ -36,7 +36,7 @@ export const CharacterPage: FC<unknown> = () => {
     <Stack className="character-page" spacing={4}>
       <CharacterTitle name={name} id={id} />
       <CharacterDescription description={description} />
-      <Flex gridGap={4}>
+      <Flex gridGap={2}>
         <CharacterDeleteBtn handleDelete={handleDelete} />
         <CharacterEditBtn id={id} />
       </Flex>

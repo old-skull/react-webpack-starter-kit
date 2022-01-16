@@ -3,7 +3,6 @@ import { Avatar, Box, Flex, Text, useColorMode } from '@chakra-ui/react';
 import { ICharacter } from '@features/characters';
 import { Link } from '@shared/components';
 import { FC } from 'react';
-import './character-card.scss';
 
 interface ICharacterCard {
   character: ICharacter;
@@ -24,6 +23,18 @@ export const CharacterCard: FC<ICharacterCard> = ({ character }) => {
       position="relative"
       overflow="hidden"
       _focusWithin={{ outline: '2px solid teal' }}
+      _hover={{
+        '&:hover': {
+          '.character-card__content': {
+            transform: 'translateX(50px)',
+          },
+          '.character-card__caption': {
+            opacity: 1,
+            transform: 'translateX(0px)',
+            transition: 'transform 0.8s, opacity 0.1s',
+          },
+        },
+      }}
     >
       <Flex
         className="character-card__content"

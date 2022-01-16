@@ -34,7 +34,7 @@ export const CharacterDeleteModal: FC<ICharacterDeleteModal> = ({ onConfirm, onC
             </Text>
           </ModalBody>
           <ModalFooter display="flex" justifyContent="space-between">
-            <Button colorScheme="blue" mr={3} onClick={onClose}>
+            <Button colorScheme="yellow" mr={3} onClick={onClose}>
               No
             </Button>
             <Button colorScheme="teal" onClick={onConfirm}>

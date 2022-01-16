@@ -13,7 +13,6 @@ export const CharacterEditBtn: FC<CharacterEditBtn> = ({ id }) => {
       as={Link}
       colorScheme="teal"
       to={`/characters/edit/${id}`}
-      _hover={{ textDecoration: 'none' }}
     >
       Edit
     </Button>
