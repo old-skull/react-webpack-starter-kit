@@ -7,10 +7,12 @@ const TerserPlugin = require('terser-webpack-plugin');
 const { TsconfigPathsPlugin } = require('tsconfig-paths-webpack-plugin');
 const { DefinePlugin } = require('webpack');
 const packageJson = require('./package.json');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = env => {
   const isDev = env.development;
   const isProd = env.production;
+  const isAnalyze = env.analyze;
 
   return {
     entry: './src/index.tsx',
@@ -102,6 +104,10 @@ module.exports = env => {
       ],
     },
     plugins: [
+      new BundleAnalyzerPlugin({
+        analyzerMode: isAnalyze ? 'server' : 'disabled',
+        defaultSizes: 'gzip',
+      }),
       new HtmlWebpackPlugin({
         inject: true,
         template: './public/index.html',

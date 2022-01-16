@@ -33,6 +33,7 @@
   - [x] [TsconfigPathsPlugin](https://github.com/dividab/tsconfig-paths-webpack-plugin)
   - [x] [Sass/Scss](https://webpack.js.org/loaders/sass-loader/)
   - [x] [swc-loader](https://github.com/swc-project/swc-loader)
+  - [x] [BundleAnalyzerPlugin](https://github.com/webpack-contrib/webpack-bundle-analyzer)
 - [x] [PNPM](https://pnpm.io/)
 
 ### UI
@@ -115,6 +116,12 @@ pnpm cypress:unit
 
 ```bash
 pnpm cypress:e2e
+```
+
+### Build for production and run BundleAnalyzerPlugin
+
+```bash
+pnpm start:analyze
 ```
 
 ## Questions and Answers
