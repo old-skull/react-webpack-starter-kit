@@ -7,6 +7,7 @@
 - [TOC](#table-of-contents)
 - [About](#about)
 - [Available scripts](#available-scripts)
+- [Treemap sizes](#treemap-sizes)
 - [Q&A](#questions-and-answers)
 
 ## About
@@ -123,6 +124,37 @@ pnpm cypress:e2e
 ```bash
 pnpm start:analyze
 ```
+
+## Treemap sizes
+
+_Generated via BundleAnalyzerPlugin_
+
+### Stat
+
+| Chunk      |   Size   |
+| ---------- | :------: |
+| All        | 1.44 MB  |
+| vendors.js | 1.39 MB  |
+| main.js    | 49.58 KB |
+| runtime.js | 1.49 KB  |
+
+### Parsed
+
+| Chunk      |   Size    |
+| ---------- | :-------: |
+| All        | 460.78 KB |
+| vendors.js | 440.47 KB |
+| main.js    | 18.81 KB  |
+| runtime.js |  1.49 KB  |
+
+### Gzipped
+
+| Chunk      |   Size    |
+| ---------- | :-------: |
+| All        | 146.68 KB |
+| vendors.js | 139.91 KB |
+| main.js    |  5.99 KB  |
+| runtime.js |   802 B   |
 
 ## Questions and Answers
 
