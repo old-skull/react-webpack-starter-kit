@@ -8,8 +8,8 @@
     "build:analyze": "cross-env NODE_ENV=production rimraf build/* && webpack-cli build --mode=production --env analyze",
     "lint": "eslint \"./src/**/*.{ts,tsx}\" --fix",
     "format": "prettier --write \"./**/*.{ts,tsx}\"",
-    "cypress:unit": "cross-env NODE_ENV=test cypress open-ct --config-file cypress.config.json",
-    "cypress:e2e": "cross-env NODE_ENV=test start-server-and-test start http://localhost:3000 cypress:open",
+    "unit": "cross-env NODE_ENV=test cypress open-ct --config-file cypress.config.json",
+    "e2e": "cross-env NODE_ENV=test start-server-and-test start http://localhost:3000 cypress:open",
     "cypress:open": "cross-env NODE_ENV=test cypress open --config-file cypress.config.json",
     "prepare": "husky install && chmod ug+x .husky/*"
   },
