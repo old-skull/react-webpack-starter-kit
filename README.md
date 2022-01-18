@@ -110,13 +110,13 @@ pnpm lint
 ### Run unit tests
 
 ```bash
-pnpm cypress:unit
+pnpm unit
 ```
 
 ### Run e2e tests
 
 ```bash
-pnpm cypress:e2e
+pnpm e2e
 ```
 
 ### Build for production and run BundleAnalyzerPlugin
