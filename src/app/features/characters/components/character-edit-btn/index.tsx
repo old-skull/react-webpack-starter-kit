@@ -2,11 +2,11 @@ import { Button } from '@chakra-ui/react';
 import { Link } from '@shared/components';
 import { FC } from 'react';
 
-interface CharacterEditBtn {
+interface ICharacterEditBtn {
   id: string;
 }
 
-export const CharacterEditBtn: FC<CharacterEditBtn> = ({ id }) => {
+export const CharacterEditBtn: FC<ICharacterEditBtn> = ({ id }) => {
   return (
     <Button
       className="character-edit-btn"
