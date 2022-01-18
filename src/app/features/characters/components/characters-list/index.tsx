@@ -1,5 +1,5 @@
 import { SimpleGrid, Skeleton } from '@chakra-ui/react';
-import { CharacterCard, ICharacter } from '@features/characters';
+import { CharacterCard, CharactersNewCard, ICharacter } from '@features/characters';
 import { FC } from 'react';
 
 interface ICharactersList {
@@ -14,5 +14,6 @@ export const CharactersList: FC<ICharactersList> = ({ characters, loaded }) => (
         <CharacterCard character={c} />
       </Skeleton>
     ))}
+    <CharactersNewCard />
   </SimpleGrid>
 );

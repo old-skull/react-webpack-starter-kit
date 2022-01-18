@@ -6,4 +6,5 @@ export * from './character-description';
 export * from './character-edit-btn';
 export * from './character-title';
 export * from './characters-list';
+export * from './characters-new-card';
 export * from './characters-title';
