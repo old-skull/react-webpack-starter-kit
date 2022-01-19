@@ -32,6 +32,8 @@ export const CharacterPage: FC<unknown> = () => {
 
   useDocumentTitle(name);
 
+  console.log(description);
+
   return (
     <Stack className="character-page" spacing={4}>
       <CharacterTitle name={name} id={id} />
