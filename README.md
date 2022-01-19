@@ -175,3 +175,13 @@ I decided to focus on the tools and their configs. If you need to add some loade
 I'm using concepts from [feature-sliced architecture](https://github.com/feature-sliced). You could delete or replace content from `src` folder and use your own naming strategy or architecture. I like short paths in imports and index.ts + ts-paths works perfect for me.
 
 Also check out [atomic-design pattern](https://bradfrost.com/blog/post/atomic-web-design/).
+
+### Why do I need preact?
+
+With Preact you could use all of React features with smaller bundle size.
+Thanks to [preact/compat](https://preactjs.com/guide/v10/switching-to-preact/) all we need to do is create aliases for webpack and use preact/compat instead of React.
+According to Preact website:
+
+> preact/compat is our compatibility layer that allows you to leverage the many libraries of the React ecosystem and use them with Preact.
+
+Using this "compatibility layer", we combine a small bundle size(~100kb diff for demo app) with full support for all React ecosystem libraries such as: react-redux, react-router, etc.
