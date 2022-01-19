@@ -172,6 +172,6 @@ I decided to focus on the tools and their configs. If you need to add some loade
 
 ### Why there is so much `index.ts`?
 
-I'm using concepts from [feature-sliced architecture](https://github.com/feature-sliced). You could delete or replace content from `src` folder and use your own naming strategy or architecture. I like short paths in imports and index.ts + ts-paths work perfect for me.
+I'm using concepts from [feature-sliced architecture](https://github.com/feature-sliced). You could delete or replace content from `src` folder and use your own naming strategy or architecture. I like short paths in imports and index.ts + ts-paths works perfect for me.
 
 Also check out [atomic-design pattern](https://bradfrost.com/blog/post/atomic-web-design/).
