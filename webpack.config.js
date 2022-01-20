@@ -106,8 +106,8 @@ module.exports = env => {
       ],
     },
     plugins: [
-      new HotModuleReplacementPlugin(),
-      new PreactRefreshPlugin(),
+      isDev && new HotModuleReplacementPlugin(),
+      isDev && new PreactRefreshPlugin(),
       new BundleAnalyzerPlugin({
         analyzerMode: isAnalyze ? 'server' : 'disabled',
         defaultSizes: 'gzip',
@@ -140,6 +140,6 @@ module.exports = env => {
       new CopyPlugin({
         patterns: [{ from: './public/robots.txt' }, { from: './public/favicon.svg' }],
       }),
-    ],
+    ].filter(Boolean),
   };
 };
