@@ -8,6 +8,8 @@ const { TsconfigPathsPlugin } = require('tsconfig-paths-webpack-plugin');
 const { DefinePlugin } = require('webpack');
 const packageJson = require('./package.json');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const PreactRefreshPlugin = require('@prefresh/webpack');
+const { HotModuleReplacementPlugin } = require('webpack');
 
 module.exports = env => {
   const isDev = env.development;
@@ -104,6 +106,8 @@ module.exports = env => {
       ],
     },
     plugins: [
+      new HotModuleReplacementPlugin(),
+      new PreactRefreshPlugin(),
       new BundleAnalyzerPlugin({
         analyzerMode: isAnalyze ? 'server' : 'disabled',
         defaultSizes: 'gzip',

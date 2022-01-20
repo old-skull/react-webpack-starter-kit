@@ -16,6 +16,7 @@
 
 - [x] [React](https://reactjs.org/) + [Preact](https://preactjs.com/)(as compatibility layer)
   - [x] [preact/compat](https://preactjs.com/guide/v10/switching-to-preact)
+  - [x] [@prefresh/webpack](https://github.com/preactjs/prefresh/tree/main/packages/webpack)
   - [x] [React-Router v6](https://reactrouterdotcom.fly.dev/docs/en/v6)
 - [x] [Redux](https://redux.js.org/) + [Redux Tool Kit](https://redux-toolkit.js.org/)
   - [x] [EntityAdapter](https://redux-toolkit.js.org/api/createEntityAdapter#overview)
@@ -35,6 +36,7 @@
   - [x] [Sass/Scss](https://webpack.js.org/loaders/sass-loader/)
   - [x] [swc-loader](https://github.com/swc-project/swc-loader)
   - [x] [BundleAnalyzerPlugin](https://github.com/webpack-contrib/webpack-bundle-analyzer)
+  - [x] [HotModuleReplacementPlugin](https://webpack.js.org/plugins/hot-module-replacement-plugin/)
 - [x] [PNPM](https://pnpm.io/)
 
 ### UI
