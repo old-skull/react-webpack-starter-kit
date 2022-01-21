@@ -32,11 +32,13 @@ describe('Characters', () => {
     });
 
     it('should navigate to the /character/:id page via card link', () => {
-      cy.get('a[href*="characters"i]').each(link => {
-        cy.visit(link.prop('href'))
-          .location('pathname')
-          .should('match', /characters\/\d+/i);
-      });
+      cy.get('a[href*="characters"i]')
+        .not(':last-child')
+        .each(link => {
+          cy.visit(link.prop('href'))
+            .location('pathname')
+            .should('match', /characters\/\d+/i);
+        });
     });
 
     it('should have visible image', () => {
