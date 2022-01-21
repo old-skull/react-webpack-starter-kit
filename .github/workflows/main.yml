@@ -35,8 +35,9 @@ jobs:
         uses: cypress-io/github-action@v2
         with:
           install: false
+          browser: chrome
           config-file: ./cypress.config.json
-          start: pnpm e2e
+          start: pnpm start
           record: true
 
         env:
