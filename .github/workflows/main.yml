@@ -31,9 +31,6 @@ jobs:
       - name: Build
         run: pnpm build
 
-        env:
-          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
-
       - name: Test:e2e
         uses: cypress-io/github-action@v2
         with:
@@ -43,7 +40,10 @@ jobs:
           start: pnpm ci:e2e
           record: true
 
-      # run after e2e bc we don't need to serve app twice
+        env:
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+
+        # run after e2e bc we don't need to serve app twice
       - name: Test:unit
         uses: cypress-io/github-action@v2
         with:
