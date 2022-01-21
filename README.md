@@ -58,7 +58,7 @@
 - [x] [Cypress](https://www.cypress.io/)
   - [x] [Unit](https://docs.cypress.io/guides/component-testing/introduction#What-is-Component-Testing)
   - [x] [e2e](https://docs.cypress.io/examples/examples/workshop#End-to-end-Testing-with-Cypress-io)
-  - [ ] [Dashboard](https://docs.cypress.io/faq/questions/dashboard-faq)
+  - [x] [Dashboard](https://docs.cypress.io/faq/questions/dashboard-faq)
 - [x] Run application before e2e using [start-server-and-test](https://www.npmjs.com/package/start-server-and-test)
 - [ ] Generate coverage report
   - [ ] [Unit](https://docs.cypress.io/guides/tooling/code-coverage)
@@ -71,10 +71,10 @@
 
 ### CI
 
-- [ ] [Github Actions](https://docs.github.com/en/actions)
-  - [ ] Build
-  - [ ] Unit tests
-  - [ ] e2e tests
+- [x] [Github Actions](https://docs.github.com/en/actions)
+  - [x] Build
+  - [x] Unit tests
+  - [x] e2e tests
   - [ ] Coverage
   - [ ] Deploy
 
