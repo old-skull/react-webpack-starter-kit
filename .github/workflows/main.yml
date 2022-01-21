@@ -31,15 +31,6 @@ jobs:
       - name: Build
         run: pnpm build
 
-      - name: Test:unit
-        uses: cypress-io/github-action@v2
-        with:
-          install: false
-          browser: chrome
-          config-file: ./cypress.config.json
-          start: pnpm ci:unit
-          record: false
-
       - name: Test:e2e
         uses: cypress-io/github-action@v2
         with:
@@ -48,6 +39,16 @@ jobs:
           config-file: ./cypress.config.json
           start: pnpm ci:e2e
           record: true
+
+      # run after e2e bc we don't need to serve app twice
+      - name: Test:unit
+        uses: cypress-io/github-action@v2
+        with:
+          install: false
+          browser: chrome
+          config-file: ./cypress.config.json
+          start: pnpm ci:unit
+          record: false
 
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
