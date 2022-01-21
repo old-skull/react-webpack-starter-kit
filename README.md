@@ -124,7 +124,7 @@ pnpm e2e
 ### Build for production and run BundleAnalyzerPlugin
 
 ```bash
-pnpm start:analyze
+pnpm build:analyze
 ```
 
 ## Treemap sizes
