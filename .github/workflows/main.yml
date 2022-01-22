@@ -54,4 +54,4 @@ jobs:
           record: false
 
       - name: Deploy to Surge
-        run: surge ./build https://react-webpack-starter-kit.surge.sh/ --token ${{secrets.SURGE_TOKEN}}
+        run: pnpm add --global surge && surge ./build https://react-webpack-starter-kit.surge.sh/ --token ${{secrets.SURGE_TOKEN}}
