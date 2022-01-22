@@ -53,8 +53,5 @@ jobs:
           start: pnpm ci:unit
           record: false
 
-      - name: Deploy to Github Pages
-        uses: JamesIves/github-pages-deploy-action@4.1.5
-        with:
-          branch: gh-pages
-          folder: build
+      - name: Deploy to Surge
+        run: surge ./build https://react-webpack-starter-kit.surge.sh/ --token ${{secrets.SURGE_TOKEN}}

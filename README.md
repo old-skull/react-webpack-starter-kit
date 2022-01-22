@@ -76,7 +76,7 @@
   - [x] Unit tests
   - [x] e2e tests
   - [ ] Coverage
-  - [ ] Deploy
+  - [x] Deploy
 
 ### Utils
 
